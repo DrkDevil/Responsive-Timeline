@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i';
+
+/* Global Styles */
+.timeline {	margin: 0;	padding: 0;	position: relative; }
+.timeline a { text-decoration: none; cursor: pointer; }
+.timeline h1 { font-size: 1.6rem; font-weight: 300; color: #FFF; letter-spacing: 0.1rem; margin-top: 5px; margin-bottom: 5px; }
+.timeline li { list-style: none; padding-top: 15px; margin-bottom: -21px; border-left: 4px solid transparent; }
+.timeline li:hover { background-color: #f8f9fa; border-left: 4px solid #1180b0; }
+
+/* Note Collapse Positioning */
+.note-close { position: relative; top: -23px; height: 0px; color: #fff !important; }
+
+/* The Dividing line between notes */
+.timeline li:after { content: ""; display: block; height: 1px; background-image: url(img/date-line.png); max-width: 900px; margin-bottom: 21px; margin-top: -25px; }
+
+/* The Time Line */
+.timeline:before { content: '';	position: absolute;	top: 50px; bottom: 0; width: 4px; background: #e9ecef; left: 16%; margin-left: -10px; }
+
+/* The date/time */
+.timeline > li .timeline-date {	display: block; width: 25%;	padding-right: 15.88888%; position: relative; top: 0; margin-bottom: -70px; }
+.timeline > li .timeline-date span { display: block; text-align: right; }
+.timeline > li .timeline-date span:first-child { font-size: 3.0rem;	color: #587086; }
+.timeline > li .timeline-date span:last-child { font-size: 1.4rem; color: #909090; margin-top: -7px; }
+.timeline > li .note-content { margin: 0 25px 15px 20%; background: #849aae; color: #777; padding: 0; font-size: 1.2em; font-weight: 300; line-height: 1.4; position: relative; border-radius: 5px; top: -20px; }
+.timeline > li .note-content:after { right: 100%; border: solid transparent; content: " "; height: 0; width: 0;	position: absolute;	pointer-events: none; border-right-color: #849aae; border-width: 10px; top: 15px; left: -19px; }
+.timeline > li:nth-child(odd) .note-content:after { right: 100%; border: solid transparent; content: " "; height: 0; width: 0;	position: absolute;	pointer-events: none; border-right-color: #587086; border-width: 10px; top: 15px; left: -19px; }
+
+/* Cell Hovers */
+.timeline > li:hover .note-content:after { border-right-color: #1180b0; }
+.timeline > li:hover .note-content .panel-footer { background-color: #1180b0; }
+.timeline > li:hover .note-content > .panel-default >.panel-heading { background-color: #1180b0; }
+.timeline > li:hover .note-content .panel-default >.panel-heading { background-color: #1180b0; }
+.timeline > li:nth-child(odd):hover .note-content .panel-default >.panel-heading { background-color: #1180b0; border-color: #1180b0; }
+.timeline > li:hover .note-icon, .timeline > li:nth-child(odd):hover .note-icon {background-color: #1180b0;  }
+.timeline > li:hover .timeline-date span:first-child { color: #176b8e; }
+.timeline > li:hover .timeline-date span:last-child { color: #537797; }
+
+/* Collapasble Content */
+.note-content .panel-default >.panel-heading { color: #fff; background-color: #849aae; border-color: #849aae; paddding: 5px 15px !important; }
+.note-content .panel-footer { padding: 4px 0px; background-color: #849aae; border-top: 1px solid #849aae; color: #fff; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; }
+.timeline > li:nth-child(odd) .note-content .panel-default >.panel-heading { color: #fff; background-color: #587086; border-color: #587086;	paddding: 5px 15px !important; }
+.timeline > li:nth-child(odd) .note-icon { color: #fff; background-color: #587086; border-color: #587086; }
+.timeline > li:nth-child(odd) .panel-footer { color: #fff; background-color: #587086; border-color: #587086; }
+
+/* AM/PM */
+.timeline-date sup { font-size: 1.2rem; vertical-align: top; margin-top: 18px; position: absolute; margin-left: 3px; }
+
+/* Icons */
+.note-icon { color: #000; }
+.timeline > li .note-icon { width: 32px; height: 32px; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; font-size: 1.4rem; line-height: 34px; -webkit-font-smoothing: antialiased; position: relative; color: #fff;	background: #849aae; border-radius: 50%; text-align: center; left: 15.8%; top: 19px; margin: 0 0 0 -24px; }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+	
+	/* The Time Line */
+	.timeline:before { content: '';	position: absolute;	top: 50px; bottom: 0; width: 4px; background:none; left: 16%; margin-left: -10px; }
+	
+	/* --- Note Content Re-Positioning --- */
+	/* Not Content */
+	.timeline > li .note-content { margin: 0 25px 15px 15px; top: 0; }
+	.timeline > li .note-content:after { right: auto; left: 20px; border-right-color: transparent; border-bottom-color: #849aae; top: -19px; }
+	.timeline > li:nth-child(odd) .note-content:after { right: auto; left: 20px; border-right-color: transparent; border-bottom-color: #587086; top: -19px;	}
+	.timeline > li:hover .note-content:after { right: auto; left: 20px; border-right-color: transparent; border-bottom-color: #1180b0; top: -19px; }
+	.timeline > li:nth-child(odd):hover .note-content:after { right: auto; left: 20px; border-right-color: transparent; border-bottom-color: #1180b0; top: -19px;	}
+	
+	/* Date and Time*/
+	.timeline > li .timeline-date { display: block; width: 25%; position: relative; top: -10px; margin-bottom: 10px; margin-left: 15px; }
+	.timeline > li .timeline-date span:first-child { font-size: 1.66em; position: relative; margin-top:0; }
+	.timeline > li .timeline-date span:last-child { font-size: 0.8em; float: left; margin-left: 3px; }
+	.timeline li:after { content: ""; display: block; height: 1px; background-image: url(img/date-line.png); max-width: 900px; margin-bottom: 20px; margin-top: 5px; }
+	.timeline-date sup { position: relative; top: 10px; }
+	
+	/* Note Icon */
+	.timeline > li .note-icon { top: -38px; margin: 0 25px 0 0; float: right; left: initial; width: 40px; height: 40px; line-height: 42px; margin-top: -9px; font-size: 1.6rem; }
+	
+}
