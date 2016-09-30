@@ -6,7 +6,7 @@
 .timeline {	margin: 0;	padding: 0;	position: relative; }
 .timeline a { text-decoration: none; cursor: pointer; }
 .timeline h1 { font-size: 1.6rem; font-weight: 300; color: #FFF; letter-spacing: 0.1rem; margin-top: 5px; margin-bottom: 5px; }
-.timeline li { list-style: none; padding-top: 15px; margin-bottom: -21px; border-left: 4px solid transparent; }
+.timeline li { list-style: none; padding-top: 15px; margin-bottom: -20px; border-left: 4px solid transparent; }
 .timeline li:hover { background-color: #f8f9fa; border-left: 4px solid #1180b0; }
 
 /* Note Collapse Positioning */
@@ -23,7 +23,7 @@
 .timeline > li .timeline-date span { display: block; text-align: right; }
 .timeline > li .timeline-date span:first-child { font-size: 3.0rem;	color: #587086; }
 .timeline > li .timeline-date span:last-child { font-size: 1.4rem; color: #909090; margin-top: -7px; }
-.timeline > li .note-content { margin: 0 25px 15px 20%; background: #849aae; color: #777; padding: 0; font-size: 1.2em; font-weight: 300; line-height: 1.4; position: relative; border-radius: 5px; top: -20px; }
+.timeline > li .note-content { margin: 0 25px 15px 20%; background: #849aae; color: #777; padding: 0; font-size: 1.2em; font-weight: 300; line-height: 1.4; position: relative; border-radius: 5px; top: -20px; border: 0; }
 .timeline > li .note-content:after { right: 100%; border: solid transparent; content: " "; height: 0; width: 0;	position: absolute;	pointer-events: none; border-right-color: #849aae; border-width: 10px; top: 15px; left: -19px; }
 .timeline > li:nth-child(odd) .note-content:after { right: 100%; border: solid transparent; content: " "; height: 0; width: 0;	position: absolute;	pointer-events: none; border-right-color: #587086; border-width: 10px; top: 15px; left: -19px; }
 
