@@ -11,7 +11,7 @@
 
 /* Note Collapse Positioning */
 .note-close { position: relative; top: -23px; height: 0px; color: #fff !important; }
-.note-user { position: relative; top: -23px; height: 0px; color: #fff !important; float: right; margin-right: 3%;}
+.note-user { position: relative; top: -23px; height: 0px; color: #fff !important; float: right; margin-right: 5%;}
 /* The Dividing line between notes */
 .timeline li:after { content: ""; display: block; height: 1px; background-image: url(img/date-line.png); max-width: 900px; margin-bottom: 21px; margin-top: -25px; }
 
